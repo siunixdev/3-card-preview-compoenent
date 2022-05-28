@@ -1,38 +1,37 @@
 .App {
-  text-align: center;
+  @apply min-h-screen min-w-full bg-very-light-gray flex items-center justify-center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  @apply grid grid-cols-1 md:grid-cols-3
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subcard {
+  @apply relative w-72 p-8
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+  font-family: 'Big Shoulders Display';
+  @apply py-6 text-3xl uppercase text-transparent-white
 }
 
-.App-link {
-  color: #61dafb;
+.image {
+  @apply w-10
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.description {
+  font-family: 'Lexend Deca';
+  @apply text-very-light-gray mb-40
+}
+
+.button {
+  @apply absolute bottom-10 bg-very-light-gray border-2 border-very-light-gray w-fit py-3 px-8 rounded-full cursor-pointer hover:bg-transparent hover:text-very-light-gray
+}
+
+.start {
+  @apply rounded-t-lg md:rounded-t-none md:rounded-l-lg
+}
+
+.end {
+  @apply rounded-b-lg md:rounded-b-none md:rounded-r-lg
 }
